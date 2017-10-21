@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAiLXOSOkhueh8okKVPurY04xD5Lfuwi74',
-    authDomain: 'login-56358.firebaseapp.com',
-    databaseURL: "https://login-56358.firebaseio.com",
-    projectId: "login-56358",
-    storageBucket: "login-56358.appspot.com",
-    messagingSenderId: "488924503844"
+    apiKey: "AIzaSyALVnHA5sctfDabX4mg_rxdv5qvDkEgda4",
+    authDomain: "relevamientovisual-f0b31.firebaseapp.com",
+    databaseURL: "https://relevamientovisual-f0b31.firebaseio.com",
+    projectId: "relevamientovisual-f0b31",
+    storageBucket: "relevamientovisual-f0b31.appspot.com",
+    messagingSenderId: "217116868862"
   }
 };
