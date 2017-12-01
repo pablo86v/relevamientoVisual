@@ -1,54 +1,54 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { HttpModule }    from '@angular/http';
+
 import { MyApp } from './app.component';
-import { StatusBar } from '@ionic-native/status-bar';
-import { Camera } from '@ionic-native/camera';
-
-//P�ginas
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { MenuPage } from '../pages/menu/menu';
+import { Menu0Page } from '../pages/menu0/menu0';
 import { LoginPage } from '../pages/login/login';
+import { MostrarImagenesPage } from '../pages/mostrar-imagenes/mostrar-imagenes';
+import { ListadoFotosPage } from '../pages/listado-fotos/listado-fotos';
 
-//Servicios
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../environments/environment';
+import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { DataProvider } from '../providers/data/data';
+import { Camera } from '@ionic-native/camera';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { CONFIG } from './firebase';
+import { ImagenesProvider } from '../providers/imagenes/imagenes';
+import { UsuarioProvider } from '../providers/usuario/usuario';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    MenuPage,
+    Menu0Page,
     LoginPage,
-    ListPage
+    MostrarImagenesPage,
+    ListadoFotosPage
   ],
   imports: [
-    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
+    AngularFireModule.initializeApp(CONFIG),
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    MenuPage,
+    Menu0Page,
     LoginPage,
-    ListPage
+    MostrarImagenesPage,
+    ListadoFotosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider,
     Camera,
-    DataProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ImagenesProvider,
+    UsuarioProvider
   ]
 })
 export class AppModule {}

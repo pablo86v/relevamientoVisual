@@ -1,24 +1,24 @@
 page-login {
-  .form-login{
-    border: 2px solid green;
-    border-radius: 20px;
-  }
-      
-  .margin{
-    margin-left :1%;
-    margin-right : 1%;
-  }
+    #body{
+        background: #cddc3961;
+    }
 
-  .botonimagen{
-    background-image:url("./../assets/chat-background.jpg");
-    background-repeat:no-repeat;
-    height:100px;
-    width:100px;
-    background-position:center;
-  }  
+    .btn{
+        height:40px;
+        font-weight: bold;
+        font-size: 18px;
+        // margin-top:20%;
+    }
 
+    .btn-ingresar{
+        background: #1a376b !important;
+        font-size: 23px !important;
+        height: 50px !important;
+    }
 
+    .form-control{
+        height: 40px;
+        font-size: 17px;
+    }
 
-}//page-login
-
-
+}
