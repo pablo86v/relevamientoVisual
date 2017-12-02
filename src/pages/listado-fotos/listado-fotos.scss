@@ -1,0 +1,38 @@
+page-listado-fotos {
+
+    #body{
+        background: #cddc3961;
+        box-sizing: border-box;
+    }
+
+    .col-6  {
+        padding: 0 !important;
+    }
+
+    .btn-opcion{
+        display: inline-block;
+        width: 98%;
+        height: 127px;
+    }
+
+    .btn-foto{
+        float:rigth;
+        background: rgb(0, 81, 146);
+
+    }
+
+    .btn-upload{
+        float: left;
+        background: #009688;
+        float: right;
+    }
+
+    .img{
+        border: 2px solid white;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+}
+
+    
